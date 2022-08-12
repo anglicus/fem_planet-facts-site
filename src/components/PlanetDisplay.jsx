@@ -5,7 +5,7 @@ import PlanetMenu from "./PlanetMenu";
 import PlanetData from "./PlanetData";
 const sections = ["overview", "structure", "geology"];
 
-const Hero = (props) => {
+const PlanetDisplay = (props) => {
   const [currentSection, setCurrentSection] = useState(0);
 
   const changeSection = (index) => {
@@ -14,14 +14,16 @@ const Hero = (props) => {
 
   return (
     <main className="hero">
-      <h1>{props.currentPlanet.name}</h1>
+      <h1 className="heading heading--planet-name">
+        {props.currentPlanet.name}
+      </h1>
       <p>{props.currentPlanet[sections[currentSection]].content}</p>
       <a
         href={props.currentPlanet[sections[currentSection]].source}
         rel="noreferrer"
         target="_blank"
       >
-        source
+        source : <span className="span-wikipedia">Wikipedia</span>
       </a>
       <PlanetMenu changeSection={changeSection} />
       <PlanetData currentPlanet={props.currentPlanet} />
@@ -29,4 +31,4 @@ const Hero = (props) => {
   );
 };
 
-export default Hero;
+export default PlanetDisplay;

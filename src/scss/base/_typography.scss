@@ -6,49 +6,113 @@ html {
   font-size: 100%;
 }
 
-// user name 
-h1 {
-  font-size: 1.5rem;
-  font-weight: 300;
+.heading {
+  text-transform: uppercase;
 
-  @include breakpoint-up(medium) {
+  // h1 planet name
+  &--planet-name {
     font-size: 2.5rem;
+    font-weight: 400;
+
+    @include breakpoint-up(medium) {
+      font-size: 3rem;
+    }
+
+    @include breakpoint-up(large) {
+      font-size: 5rem;
+    }
+  }
+
+  // h2
+  // --planet-section
+  // > is invisible, used for screen readers
+
+  // h3 planet data label
+  &--data-label {
+    font-size: 0.5rem;
+    letter-spacing: 0.73px;
+    font-weight: 700;
+
+    // same on medium
+
+    @include breakpoint-up(large) {
+      font-size: 0.6875rem;
+      letter-spacing: 1px;
+    }
+  }
+
+  // h4 planet data
+  &--data-value {
+    font-size: 1.25rem;
+    letter-spacing: -0.75px;
+    font-weight: 400;
+
+    @include breakpoint-up(medium) {
+      font-size: 1.5rem;
+      letter-spacing: -0.9px;
+    }
+
+    @include breakpoint-up(large) {
+      font-size: 2.5rem;
+      letter-spacing: -1.5px;
+    }
   }
 }
 
-// card titles
-h2 {
-  font-size: 1.125rem;
-  font-weight: 500;
+// body
+p {
+  font-size: 0.6875rem;
+  line-height: 1.375;
+  font-weight: 400;
 
-  // same on all screen sizes
-}
-
-// hour values
-h3 {
-  font-size: 2rem;
-  font-weight: 300;
-
-  @include breakpoint-up(medium) {
-    font-size: 2.5rem;
-  }
+  // same on medium
 
   @include breakpoint-up(large) {
-    font-size: 3.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5625rem;
   }
 }
 
-// 'report for' and previous hours
-p {
-  font-size: 0.9375rem;
-  font-weight: 400;
+.button {
+  font-weight: 700;
+  text-transform: uppercase;
 
-  // same on all screen sizes
+  &--planet-menu {
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
+    letter-spacing: 1.36px;
+
+    @include breakpoint-up(medium) {
+      font-size: 0.6875rem;
+      letter-spacing: 1px;
+
+      // same on large
+    }
+  }
+
+  // planet menu items
+  &--section-menu {
+    font-size: 0.5625rem;
+    letter-spacing: 1.93px;
+
+    // same on medium
+
+    @include breakpoint-up(large) {
+      font-size: 0.75rem;
+      letter-spacing: 2.57px;
+    }
+  }
 }
 
-button {
-  font-size: 1.125rem;
+// source link
+a {
+  font-size: 0.75rem;
+  line-height: 1.5625rem;
   font-weight: 400;
+  text-decoration: none;
 
-  // same on all screen sizes
+  &.span-wikipedia {
+    font-weight: 700;
+    text-decoration: underline;
+  }
 }

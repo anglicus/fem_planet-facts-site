@@ -4,7 +4,7 @@ const Header = (props) => {
   const menuItems = props.planets.map((planet, index) => {
     return (
       <button
-        className="header__button button button--planet-link"
+        className="header__button button button--planet-menu"
         key={planet.name}
         aria-label={planet.name}
         onClick={() => props.changePlanet(index)}

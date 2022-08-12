@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=League+Spartan:wght@400;700&display=swap");
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -16,49 +16,109 @@ body {
 }
 
 * {
-  font-family: "Rubik", sans-serif;
+  font-family: "League Spartan", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Antonio", sans-serif;
 }
 
 html {
   font-size: 100%;
 }
 
-h1 {
-  font-size: 1.5rem;
-  font-weight: 300;
+.heading {
+  text-transform: uppercase;
+}
+.heading--planet-name {
+  font-size: 2.5rem;
+  font-weight: 400;
 }
 @media (min-width: 641px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-}
-
-h2 {
-  font-size: 1.125rem;
-  font-weight: 500;
-}
-
-h3 {
-  font-size: 2rem;
-  font-weight: 300;
-}
-@media (min-width: 641px) {
-  h3 {
-    font-size: 2.5rem;
+  .heading--planet-name {
+    font-size: 3rem;
   }
 }
 @media (min-width: 1025px) {
-  h3 {
-    font-size: 3.5rem;
+  .heading--planet-name {
+    font-size: 5rem;
+  }
+}
+.heading--data-label {
+  font-size: 0.5rem;
+  letter-spacing: 0.73px;
+  font-weight: 700;
+}
+@media (min-width: 1025px) {
+  .heading--data-label {
+    font-size: 0.6875rem;
+    letter-spacing: 1px;
+  }
+}
+.heading--data-value {
+  font-size: 1.25rem;
+  letter-spacing: -0.75px;
+  font-weight: 400;
+}
+@media (min-width: 641px) {
+  .heading--data-value {
+    font-size: 1.5rem;
+    letter-spacing: -0.9px;
+  }
+}
+@media (min-width: 1025px) {
+  .heading--data-value {
+    font-size: 2.5rem;
+    letter-spacing: -1.5px;
   }
 }
 
 p {
-  font-size: 0.9375rem;
+  font-size: 0.6875rem;
+  line-height: 1.375;
   font-weight: 400;
 }
+@media (min-width: 1025px) {
+  p {
+    font-size: 0.875rem;
+    line-height: 1.5625rem;
+  }
+}
 
-button {
-  font-size: 1.125rem;
+.button {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.button--planet-menu {
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
+  letter-spacing: 1.36px;
+}
+@media (min-width: 641px) {
+  .button--planet-menu {
+    font-size: 0.6875rem;
+    letter-spacing: 1px;
+  }
+}
+.button--section-menu {
+  font-size: 0.5625rem;
+  letter-spacing: 1.93px;
+}
+@media (min-width: 1025px) {
+  .button--section-menu {
+    font-size: 0.75rem;
+    letter-spacing: 2.57px;
+  }
+}
+
+a {
+  font-size: 0.75rem;
+  line-height: 1.5625rem;
   font-weight: 400;
+  text-decoration: none;
+}
+a.span-wikipedia {
+  font-weight: 700;
+  text-decoration: underline;
 }/*# sourceMappingURL=index.css.map */
