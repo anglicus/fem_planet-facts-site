@@ -10,14 +10,23 @@ import "./css/App.css";
 function App() {
   const [currentPlanet, setCurrentPlanet] = useState(2); // start on Earth
   const [menuOpen, setMenuOpen] = useState(false); // hamburger menu on mobile
+  const [animate, setAnimate] = useState(false);
+  const [previousPlanet, setPreviousPlanet] = useState(0);
 
   const toggleMenu = () => {
     setMenuOpen(menuOpen ? false : true);
   };
 
   const changePlanet = (index) => {
-    setCurrentPlanet(index);
-    setMenuOpen(false);
+    if (index !== currentPlanet && !animate) {
+      setPreviousPlanet(currentPlanet);
+      setCurrentPlanet(index);
+      setAnimate(true);
+      setTimeout(() => {
+        setAnimate(false);
+      }, 2000);
+      setMenuOpen(false);
+    }
   };
 
   return (
@@ -28,7 +37,11 @@ function App() {
         toggleMenu={toggleMenu}
         menuOpen={menuOpen}
       />
-      <PlanetDisplay currentPlanet={Planets[currentPlanet]} />
+      <PlanetDisplay
+        currentPlanet={Planets[currentPlanet]}
+        previousPlanet={Planets[previousPlanet]}
+        animate={animate}
+      />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 // PlanetDisplay.jsx
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import PlanetMenu from "./PlanetMenu";
 import PlanetData from "./PlanetData";
@@ -15,9 +15,19 @@ const PlanetDisplay = (props) => {
     setCurrentSection(index);
   };
 
+  useEffect(() => {
+    if (props.animate) {
+      setCurrentSection(0);
+    }
+  }, [props.animate]);
+
   return (
     <main className={`planet-display color-class-${props.currentPlanet.name}`}>
-      <div className="planet-display__image-div">
+      <div
+        className={`planet-display__image-div ${
+          props.animate ? "flying-in" : ""
+        }`}
+      >
         <img
           className={`planet-display__image image-planet ${
             currentSection === 1 ? "hide" : "show"
@@ -40,6 +50,17 @@ const PlanetDisplay = (props) => {
           alt={props.currentPlanet.name + " surface geology"}
         />
       </div>
+      {props.animate ? (
+        <div className={"planet-display__image-div previous-planet flying-out"}>
+          <img
+            className={`planet-display__image image-planet ${
+              currentSection === 1 ? "hide" : "show"
+            }`}
+            src={props.previousPlanet.images["planet"]}
+            alt={props.previousPlanet.name + " planet"}
+          />
+        </div>
+      ) : null}
       <div className="planet-display__text-div">
         <h2 className="planet-display__heading heading heading--planet-name">
           {props.currentPlanet.name}

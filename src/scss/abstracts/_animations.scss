@@ -1,0 +1,42 @@
+// _animations.scss
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fly-out {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    left: 0;
+    top: 0;
+  }
+
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+    left: -120%;
+    top: 30%;
+  }
+}
+
+@keyframes fly-in {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+    left: 100%;
+    top: -30%;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    left: 0%;
+    top: 0%;
+  }
+}

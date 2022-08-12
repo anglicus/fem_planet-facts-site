@@ -28,6 +28,7 @@ const Header = (props) => {
       </h1>
       <button
         className="header__menu-button button button--hamburger"
+        aria-label="menu"
         onClick={props.toggleMenu}
       >
         <img

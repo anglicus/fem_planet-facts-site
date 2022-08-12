@@ -19,11 +19,13 @@
     flex-direction: column;
     max-width: 281px;
     height: auto;
+    border: none;
   }
 
   @include breakpoint-up(large) {
     max-width: none;
     width: 350px;
+    height: 176px;
   }
 
   &__button {
