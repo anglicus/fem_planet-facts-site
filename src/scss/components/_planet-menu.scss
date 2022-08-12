@@ -42,6 +42,10 @@
       }
     }
 
+    @include breakpoint-up(large) {
+      height: 48px;
+    }
+
     &.selected {
       color: white;
       border-top: 4px solid transparent;
@@ -61,7 +65,12 @@
     @include breakpoint-up(medium) {
       display: inline;
       margin-left: 20px;
-      margin-right: 12px;
+      margin-right: 11px;
+    }
+
+    @include breakpoint-up(large) {
+      margin-left: 28px;
+      margin-right: 20px;
     }
   }
 

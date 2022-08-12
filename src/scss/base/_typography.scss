@@ -46,8 +46,8 @@ html {
     // same on medium
 
     @include breakpoint-up(large) {
-      font-size: 0.6875rem;
-      letter-spacing: 1px;
+      font-size: 0.8125rem;
+      letter-spacing: 1.5px;
     }
   }
 
@@ -76,11 +76,14 @@ p {
   letter-spacing: 0.65px;
   font-weight: 200;
 
-  // same on medium
+  @include breakpoint-up(medium) {
+    letter-spacing: 0.51px;
+  }
 
   @include breakpoint-up(large) {
-    font-size: 0.875rem;
+    font-size: 1.0625rem;
     line-height: 1.5625rem;
+    letter-spacing: 0.65px;
   }
 }
 
@@ -94,8 +97,8 @@ p {
     letter-spacing: 1.36px;
 
     @include breakpoint-up(medium) {
-      font-size: 0.6875rem;
-      letter-spacing: 1px;
+      font-size: 0.8125rem;
+      letter-spacing: 1.5px;
 
       // same on large
     }
@@ -109,8 +112,8 @@ p {
     // same on medium
 
     @include breakpoint-up(large) {
-      font-size: 0.75rem;
-      letter-spacing: 2.57px;
+      font-size: 0.875rem;
+      letter-spacing: 3px;
     }
   }
 }
@@ -122,6 +125,12 @@ a {
   letter-spacing: 0.65px;
   font-weight: 400;
   text-decoration: none;
+
+  @include breakpoint-up(large) {
+    font-size: 1.0625rem;
+    line-height: 1.5625rem;
+    letter-spacing: 0.65px;
+  }
 
   & > .span-wikipedia {
     font-weight: 600;

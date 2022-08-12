@@ -15,7 +15,12 @@
 
   @include breakpoint-up(medium) {
     flex-direction: column;
-    padding: 32px 52px 32px;
+    padding: 32px 52px 28px;
+  }
+
+  @include breakpoint-up(large) {
+    flex-direction: row;
+    padding: 22px 40px 26px 32px;
   }
 
   &__menu-button {
@@ -52,6 +57,7 @@
     }
 
     @include breakpoint-up(medium) {
+      background-color: transparent;
       position: relative;
       top: 0;
       height: auto;
@@ -62,6 +68,11 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+    }
+
+    @include breakpoint-up(large) {
+      width: 664px;
+      margin-top: 8px;
     }
   }
 

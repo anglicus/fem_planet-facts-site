@@ -104,8 +104,8 @@ html {
 }
 @media (min-width: 1025px) {
   .heading--data-label {
-    font-size: 0.6875rem;
-    letter-spacing: 1px;
+    font-size: 0.8125rem;
+    letter-spacing: 1.5px;
   }
 }
 .heading--data-value {
@@ -132,10 +132,16 @@ p {
   letter-spacing: 0.65px;
   font-weight: 200;
 }
+@media (min-width: 641px) {
+  p {
+    letter-spacing: 0.51px;
+  }
+}
 @media (min-width: 1025px) {
   p {
-    font-size: 0.875rem;
+    font-size: 1.0625rem;
     line-height: 1.5625rem;
+    letter-spacing: 0.65px;
   }
 }
 
@@ -150,8 +156,8 @@ p {
 }
 @media (min-width: 641px) {
   .button--planet-button {
-    font-size: 0.6875rem;
-    letter-spacing: 1px;
+    font-size: 0.8125rem;
+    letter-spacing: 1.5px;
   }
 }
 .button--section-menu {
@@ -160,8 +166,8 @@ p {
 }
 @media (min-width: 1025px) {
   .button--section-menu {
-    font-size: 0.75rem;
-    letter-spacing: 2.57px;
+    font-size: 0.875rem;
+    letter-spacing: 3px;
   }
 }
 
@@ -171,6 +177,13 @@ a {
   letter-spacing: 0.65px;
   font-weight: 400;
   text-decoration: none;
+}
+@media (min-width: 1025px) {
+  a {
+    font-size: 1.0625rem;
+    line-height: 1.5625rem;
+    letter-spacing: 0.65px;
+  }
 }
 a > .span-wikipedia {
   font-weight: 600;
