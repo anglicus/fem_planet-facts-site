@@ -37,7 +37,11 @@ const Header = (props) => {
           alt="hamburger icon"
         />
       </button>
-      <div className={`header__menu-section ${props.menuOpen ? "open" : ""}`}>
+      <div
+        className={`header__menu-section ${
+          props.menuFade ? "fading-out" : props.menuOpen ? "open fading-in" : ""
+        }`}
+      >
         {menuItems}
       </div>
     </header>

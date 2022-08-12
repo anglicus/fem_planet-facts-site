@@ -119,7 +119,7 @@
     grid-area: text;
     justify-self: start;
     align-self: start;
-    animation: var(--animation) 1s;
+    animation: var(--fading-in) 2s;
 
     @include breakpoint-up(medium) {
       align-items: flex-start;

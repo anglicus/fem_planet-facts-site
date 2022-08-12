@@ -201,6 +201,8 @@
 }
 .data-box__value {
   margin-bottom: 8px;
+  -webkit-animation: var(--fading-in) 2s;
+          animation: var(--fading-in) 2s;
 }
 @media (min-width: 641px) {
   .data-box__value {
@@ -269,12 +271,25 @@
 }
 .header__menu-section.open {
   display: block;
+  -webkit-animation: var(--fading-in) 1s;
+          animation: var(--fading-in) 1s;
 }
 @media (min-width: 641px) {
   .header__menu-section.open {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+.header__menu-section.fading-out {
+  display: block;
+  -webkit-animation: var(--fading-out) 1s;
+          animation: var(--fading-out) 1s;
+}
+@media (min-width: 641px) {
+  .header__menu-section.fading-out {
+    -webkit-animation: none;
+            animation: none;
   }
 }
 @media (min-width: 641px) {
@@ -446,6 +461,38 @@
     top: 0%;
   }
 }
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.fading-in {
+  --fading-in: fade-in;
+}
+
+.fading-out {
+  --fading-out: fade-out;
+}
+
 .planet-display {
   display: grid;
   grid-template-areas: "menu" "image" "text" "data";
@@ -566,8 +613,8 @@
   grid-area: text;
   justify-self: start;
   align-self: start;
-  -webkit-animation: var(--animation) 1s;
-          animation: var(--animation) 1s;
+  -webkit-animation: var(--fading-in) 2s;
+          animation: var(--fading-in) 2s;
 }
 @media (min-width: 641px) {
   .planet-display__text-div {

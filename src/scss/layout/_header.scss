@@ -50,9 +50,19 @@
 
     &.open {
       display: block;
+      animation: var(--fading-in) 1s;
 
       @include breakpoint-up(medium) {
         display: flex;
+      }
+    }
+
+    &.fading-out {
+      display: block;
+      animation: var(--fading-out) 1s;
+
+      @include breakpoint-up(medium) {
+        animation: none;
       }
     }
 

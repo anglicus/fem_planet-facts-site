@@ -22,7 +22,11 @@ const PlanetDisplay = (props) => {
   }, [props.animate]);
 
   return (
-    <main className={`planet-display color-class-${props.currentPlanet.name}`}>
+    <main
+      className={`planet-display color-class-${props.currentPlanet.name} ${
+        props.animate ? "fading-in" : ""
+      }`}
+    >
       <div
         className={`planet-display__image-div ${
           props.animate ? "flying-in" : ""
