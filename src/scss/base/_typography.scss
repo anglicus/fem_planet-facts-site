@@ -13,7 +13,7 @@ html {
   // h1 page title
   &--the-planets {
     font-size: 1.75rem;
-    letter-spacing: -1.05px;
+    letter-spacing: -1.8px;
 
     // same on all sizes
   }
@@ -38,9 +38,9 @@ html {
 
   // h4 planet data label
   &--data-label {
-    font-size: 0.5rem;
+    font-size: 0.625rem;
     letter-spacing: 0.73px;
-    font-weight: 700;
+    font-weight: 600;
 
     // same on medium
 
@@ -70,9 +70,10 @@ html {
 
 // body
 p {
-  font-size: 0.6875rem;
-  line-height: 1.375;
-  font-weight: 400;
+  font-size: 0.8125rem; // design 11
+  line-height: 1.375rem;
+  letter-spacing: 0.65px;
+  font-weight: 200;
 
   // same on medium
 
@@ -83,10 +84,10 @@ p {
 }
 
 .button {
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
 
-  &--planet-menu {
+  &--planet-button {
     font-size: 0.9375rem;
     line-height: 1.5625rem;
     letter-spacing: 1.36px;
@@ -101,8 +102,8 @@ p {
 
   // planet menu items
   &--section-menu {
-    font-size: 0.5625rem;
-    letter-spacing: 1.93px;
+    font-size: 0.6875rem; // 0.5625rem; // design: 9px
+    letter-spacing: 2.3px;
 
     // same on medium
 
@@ -115,13 +116,14 @@ p {
 
 // source link
 a {
-  font-size: 0.75rem;
+  font-size: 0.875rem; // design: 12px
   line-height: 1.5625rem;
+  letter-spacing: 0.65px;
   font-weight: 400;
   text-decoration: none;
 
-  &.span-wikipedia {
-    font-weight: 700;
+  & > .span-wikipedia {
+    font-weight: 600;
     text-decoration: underline;
   }
 }

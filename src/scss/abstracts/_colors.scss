@@ -5,22 +5,42 @@ $medGrey: #838391;
 $darkGrey: #38384f;
 $nearBlack: #070724;
 
-// for highlighting on the main display
-$heroMercury: #419ebb;
-$heroVenus: #eda249;
-$heroEarth: #6d2ed5;
-$heroMars: #d14c32;
-$heroJupiter: #d83a34;
-$heroSaturn: #cd5120;
-$heroUranus: #1ec1a2;
-$heroNeptune: #2d68f0;
+.color-class-Mercury {
+  --hero-color: #419ebb;
+  --menu-color: #def4fc;
+}
 
-// for mobile menu
-$menuMercury: #def4fc;
-$menuVenus: #ecad7a;
-$menuEarth: #545bfe;
-$menuMars: #ff6a45;
-$menuJupiter: #ecad7a;
-$menuSaturn: #fccb6b;
-$menuUranus: #65f0d5;
-$menuNeptune: #497efa;
+.color-class-Venus {
+  --hero-color: #eda249;
+  --menu-color: #ecad7a;
+}
+
+.color-class-Earth {
+  --hero-color: #6d2ed5;
+  --menu-color: #545bfe;
+}
+
+.color-class-Mars {
+  --hero-color: #d14c32;
+  --menu-color: #ff6a45;
+}
+
+.color-class-Jupiter {
+  --hero-color: #d83a34;
+  --menu-color: #ecad7a;
+}
+
+.color-class-Saturn {
+  --hero-color: #cd5120;
+  --menu-color: #fccb6b;
+}
+
+.color-class-Uranus {
+  --hero-color: #1ec1a2;
+  --menu-color: #65f0d5;
+}
+
+.color-class-Neptune {
+  --hero-color: #2d68f0;
+  --menu-color: #497efa;
+}

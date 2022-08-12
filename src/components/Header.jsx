@@ -6,17 +6,18 @@ import iconHamburger from "../assets/icon-hamburger.svg";
 const Header = (props) => {
   const menuItems = props.planets.map((planet, index) => {
     return (
-      <div className="header__menu-item" key={planet.name}>
-        <span className={`header__menu-circle ${planet.name}`}></span>
-        <button
-          className="header__planet-button button button--planet-button"
-          aria-label={planet.name}
-          onClick={() => props.changePlanet(index)}
-        >
-          {planet.name}
-        </button>
+      <button
+        className="header__planet-button header__menu-item button button--planet-button"
+        aria-label={planet.name}
+        key={planet.name}
+        onClick={() => props.changePlanet(index)}
+      >
+        <span
+          className={`header__menu-circle color-class-${planet.name}`}
+        ></span>
+        <span className="header__button-label">{planet.name}</span>
         <img className="header__menu-icon" src={iconChevron} alt="chevron" />
-      </div>
+      </button>
     );
   });
 

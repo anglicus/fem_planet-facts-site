@@ -16,9 +16,8 @@ function App() {
   };
 
   const changePlanet = (index) => {
-    if (index !== currentPlanet) {
-      setCurrentPlanet(index);
-    }
+    setCurrentPlanet(index);
+    setMenuOpen(false);
   };
 
   return (

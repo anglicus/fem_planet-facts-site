@@ -1,20 +1,27 @@
 // PlanetData.jsx
 
 import DataBox from "./DataBox";
-const dataLabels = ["rotation", "revolution", "radius", "temperature"];
+const dataInfo = [
+  { index: "rotation", label: "rotation time" },
+  { index: "revolution", label: "revolution time" },
+  { index: "radius", label: "radius" },
+  { index: "temperature", label: "average temp." },
+];
 
 const PlanetData = (props) => {
-  const dataBoxes = dataLabels.map((label) => {
+  const dataBoxes = dataInfo.map((info) => {
     return (
       <DataBox
-        label={label}
-        value={props.currentPlanet[label]}
-        key={props.currentPlanet.name + label}
+        label={info.label}
+        value={props.currentPlanet[info.index]}
+        key={props.currentPlanet.name + info.index}
       />
     );
   });
 
-  return <div className="hero__planet-data planet-data">{dataBoxes}</div>;
+  return (
+    <div className="planet-display__planet-data planet-data">{dataBoxes}</div>
+  );
 };
 
 export default PlanetData;

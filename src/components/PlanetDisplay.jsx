@@ -3,6 +3,9 @@ import { useState } from "react";
 
 import PlanetMenu from "./PlanetMenu";
 import PlanetData from "./PlanetData";
+
+import iconSource from "../assets/icon-source.svg";
+
 const sections = ["overview", "structure", "geology"];
 
 const PlanetDisplay = (props) => {
@@ -13,7 +16,7 @@ const PlanetDisplay = (props) => {
   };
 
   return (
-    <main className="planet-display">
+    <main className={`planet-display color-class-${props.currentPlanet.name}`}>
       <div className="planet-display__image-div">
         <img
           className={`planet-display__image image-planet ${
@@ -44,11 +47,17 @@ const PlanetDisplay = (props) => {
         {props.currentPlanet[sections[currentSection]].content}
       </p>
       <a
+        className="planet-display__source-link"
         href={props.currentPlanet[sections[currentSection]].source}
         rel="noreferrer"
         target="_blank"
       >
-        source : <span className="span-wikipedia">Wikipedia</span>
+        Source : <span className="span-wikipedia">Wikipedia</span>
+        <img
+          className="planet-display__link-icon"
+          src={iconSource}
+          alt="link icon"
+        />
       </a>
       <PlanetMenu
         changeSection={changeSection}

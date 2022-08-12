@@ -1,8 +1,21 @@
 // _button.scss
 
+@use "../abstracts/colors" as *;
+
 .button {
   cursor: pointer;
   border: none;
   background: none;
   color: white;
+
+  &--section-menu {
+    color: $medGrey;
+    width: 80px;
+
+    &.selected {
+      color: white;
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid var(--hero-color);
+    }
+  }
 }
