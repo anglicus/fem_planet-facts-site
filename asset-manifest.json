@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/fem_planet-facts-site/static/css/main.709786af.css",
+    "main.js": "/fem_planet-facts-site/static/js/main.a10bcd8a.js",
+    "static/js/787.8c4755c7.chunk.js": "/fem_planet-facts-site/static/js/787.8c4755c7.chunk.js",
+    "static/media/Desktop - Earth - 03.png": "/fem_planet-facts-site/static/media/Desktop - Earth - 03.cf8eb8a0283a6d6c825f.png",
+    "static/media/Tablet - Saturn.png": "/fem_planet-facts-site/static/media/Tablet - Saturn.00b11cff0fa631d36db1.png",
+    "static/media/Mobile - Mercury.png": "/fem_planet-facts-site/static/media/Mobile - Mercury.5e3906b3a6e08f6299f4.png",
+    "static/media/background-stars.svg": "/fem_planet-facts-site/static/media/background-stars.f6233a6a8d2351c57f2b.svg",
+    "index.html": "/fem_planet-facts-site/index.html",
+    "static/media/icon-source.svg": "/fem_planet-facts-site/static/media/icon-source.90231c6845b7449a736412f3da2e3aaa.svg",
+    "static/media/icon-hamburger.svg": "/fem_planet-facts-site/static/media/icon-hamburger.05a40a49142005f6faf230286ab38214.svg",
+    "static/media/icon-chevron.svg": "/fem_planet-facts-site/static/media/icon-chevron.8915cee97f993fb990aac66c578ad575.svg",
+    "main.709786af.css.map": "/fem_planet-facts-site/static/css/main.709786af.css.map",
+    "main.a10bcd8a.js.map": "/fem_planet-facts-site/static/js/main.a10bcd8a.js.map",
+    "787.8c4755c7.chunk.js.map": "/fem_planet-facts-site/static/js/787.8c4755c7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.709786af.css",
+    "static/js/main.a10bcd8a.js"
+  ]
+}
