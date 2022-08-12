@@ -3,8 +3,8 @@
 const DataBox = (props) => {
   return (
     <div className="data-box">
-      <p className="data-box__label">data label</p>
-      <p className="data-box__value">9.99</p>
+      <p className="data-box__label">{props.label}</p>
+      <p className="data-box__value">{props.value}</p>
     </div>
   );
 };

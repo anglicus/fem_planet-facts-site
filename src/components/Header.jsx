@@ -1,18 +1,23 @@
 // Header.jsx
 
 const Header = (props) => {
-  const menuItems = props.planets.map((planet) => {
+  const menuItems = props.planets.map((planet, index) => {
     return (
-      <li className="header__menu-item" key={planet.name}>
+      <button
+        className="header__button button button--planet-link"
+        key={planet.name}
+        aria-label={planet.name}
+        onClick={() => props.changePlanet(index)}
+      >
         {planet.name}
-      </li>
+      </button>
     );
   });
 
   return (
     <header className="header">
       <h1 className="header__heading">the planets</h1>
-      <ul className="header__menu-list">{menuItems}</ul>
+      <div className="header__menu-links">{menuItems}</div>
     </header>
   );
 };
