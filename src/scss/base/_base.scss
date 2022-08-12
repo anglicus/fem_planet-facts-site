@@ -1,17 +1,19 @@
 @use "../abstracts/colors" as *;
-@use "../abstracts/mixins" as *;
 
 html {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
 
 body {
-  background-color: white;
+  background-color: $nearBlack;
+  overflow-x: hidden;
 }
-

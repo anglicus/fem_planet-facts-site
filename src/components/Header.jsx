@@ -16,7 +16,9 @@ const Header = (props) => {
 
   return (
     <header className="header">
-      <h1 className="header__heading">the planets</h1>
+      <h1 className="header__heading heading heading--the-planets">
+        the planets
+      </h1>
       <div className="header__menu-links">{menuItems}</div>
     </header>
   );

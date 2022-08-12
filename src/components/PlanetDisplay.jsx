@@ -14,9 +14,9 @@ const PlanetDisplay = (props) => {
 
   return (
     <main className="hero">
-      <h1 className="heading heading--planet-name">
+      <h2 className="heading heading--planet-name">
         {props.currentPlanet.name}
-      </h1>
+      </h2>
       <p>{props.currentPlanet[sections[currentSection]].content}</p>
       <a
         href={props.currentPlanet[sections[currentSection]].source}
