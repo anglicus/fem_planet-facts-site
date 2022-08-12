@@ -1,1 +1,160 @@
-/*# sourceMappingURL=App.css.map */
+.button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: white;
+}
+
+.planet-menu {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid white;
+}
+.planet-menu__button-number {
+  display: none;
+}
+.planet-menu__extra-text {
+  display: none;
+}
+
+.header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid white;
+}
+.header__hamburger-icon {
+  width: 24px;
+  height: 17px;
+}
+.header__menu-section {
+  background-color: #070724;
+  position: absolute;
+  z-index: 3;
+  top: 68px;
+  left: 0;
+  width: 100%;
+  padding: 24px 32px 0 24px;
+  display: none;
+}
+.header__menu-section.open {
+  display: block;
+}
+.header__menu-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 65px;
+}
+.header__menu-item:not(:last-child) {
+  border-bottom: 1px solid white;
+}
+.header__menu-circle {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.header__menu-circle.Mercury {
+  background-color: #def4fc;
+}
+.header__menu-circle.Venus {
+  background-color: #ecad7a;
+}
+.header__menu-circle.Earth {
+  background-color: #545bfe;
+}
+.header__menu-circle.Mars {
+  background-color: #ff6a45;
+}
+.header__menu-circle.Jupiter {
+  background-color: #ecad7a;
+}
+.header__menu-circle.Saturn {
+  background-color: #fccb6b;
+}
+.header__menu-circle.Uranus {
+  background-color: #65f0d5;
+}
+.header__menu-circle.Neptune {
+  background-color: #497efa;
+}
+.header__menu-icon {
+  width: 4px;
+  height: 8px;
+}
+
+.planet-display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.planet-display__image-div {
+  position: relative;
+  width: 100%;
+  height: 304px;
+}
+.planet-display__image {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%) scale(0.385);
+          transform: translateY(-50%) translateX(-50%) scale(0.385);
+}
+.planet-display__image.hide {
+  display: none;
+}
+.planet-display__image.image-geology {
+  position: absolute;
+  width: 80px;
+}
+.planet-display__content {
+  margin-top: 16px;
+  padding: 0 24px;
+}
+.planet-display__planet-menu {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}/*# sourceMappingURL=App.css.map */

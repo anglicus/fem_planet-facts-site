@@ -1,0 +1,91 @@
+// _header.scss
+
+@use "../abstracts/colors" as *;
+
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 16px 24px;
+  border-bottom: 1px solid white;
+
+  &__hamburger-icon {
+    width: 24px;
+    height: 17px;
+  }
+
+  &__menu-section {
+    background-color: $nearBlack;
+    position: absolute;
+    z-index: 3;
+    top: 68px;
+    left: 0;
+    width: 100%;
+    padding: 24px 32px 0 24px;
+
+    display: none;
+
+    &.open {
+      display: block;
+    }
+  }
+
+  &__menu-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 65px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid white;
+    }
+  }
+
+  &__menu-circle {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+
+    &.Mercury {
+      background-color: $menuMercury;
+    }
+
+    &.Venus {
+      background-color: $menuVenus;
+    }
+
+    &.Earth {
+      background-color: $menuEarth;
+    }
+
+    &.Mars {
+      background-color: $menuMars;
+    }
+
+    &.Jupiter {
+      background-color: $menuJupiter;
+    }
+
+    &.Saturn {
+      background-color: $menuSaturn;
+    }
+
+    &.Uranus {
+      background-color: $menuUranus;
+    }
+
+    &.Neptune {
+      background-color: $menuNeptune;
+    }
+  }
+
+  &__menu-icon {
+    width: 4px;
+    height: 8px;
+  }
+}

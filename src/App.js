@@ -9,6 +9,11 @@ import "./css/App.css";
 
 function App() {
   const [currentPlanet, setCurrentPlanet] = useState(2); // start on Earth
+  const [menuOpen, setMenuOpen] = useState(false); // hamburger menu on mobile
+
+  const toggleMenu = () => {
+    setMenuOpen(menuOpen ? false : true);
+  };
 
   const changePlanet = (index) => {
     if (index !== currentPlanet) {
@@ -18,7 +23,12 @@ function App() {
 
   return (
     <div className="App">
-      <Header planets={Planets} changePlanet={changePlanet} />
+      <Header
+        planets={Planets}
+        changePlanet={changePlanet}
+        toggleMenu={toggleMenu}
+        menuOpen={menuOpen}
+      />
       <PlanetDisplay currentPlanet={Planets[currentPlanet]} />
     </div>
   );

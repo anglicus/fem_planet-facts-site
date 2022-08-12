@@ -1,3 +1,8 @@
 // App.scss
 
-@use "./layout/main";
+//components
+@use "./components/button";
+@use "./components/planet-menu";
+// layout
+@use "./layout/header";
+@use "./layout/planet-display";

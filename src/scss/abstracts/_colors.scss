@@ -4,11 +4,23 @@ $lightGrey: #d8d8d8;
 $medGrey: #838391;
 $darkGrey: #38384f;
 $nearBlack: #070724;
-$teal: #419ebb;
-$green: #1ec1a2;
-$blue: #2d68f0;
-$purple: #6d2ed5;
-$yellowishOrange: #eda249;
-$orange: #cd5120;
-$reddishOrange: #d14c32;
-$red: #d83a34;
+
+// for highlighting on the main display
+$heroMercury: #419ebb;
+$heroVenus: #eda249;
+$heroEarth: #6d2ed5;
+$heroMars: #d14c32;
+$heroJupiter: #d83a34;
+$heroSaturn: #cd5120;
+$heroUranus: #1ec1a2;
+$heroNeptune: #2d68f0;
+
+// for mobile menu
+$menuMercury: #def4fc;
+$menuVenus: #ecad7a;
+$menuEarth: #545bfe;
+$menuMars: #ff6a45;
+$menuJupiter: #ecad7a;
+$menuSaturn: #fccb6b;
+$menuUranus: #65f0d5;
+$menuNeptune: #497efa;

@@ -1,4 +1,4 @@
-// Hero.jsx
+// PlanetDisplay.jsx
 import { useState } from "react";
 
 import PlanetMenu from "./PlanetMenu";
@@ -13,11 +13,36 @@ const PlanetDisplay = (props) => {
   };
 
   return (
-    <main className="hero">
-      <h2 className="heading heading--planet-name">
+    <main className="planet-display">
+      <div className="planet-display__image-div">
+        <img
+          className={`planet-display__image image-planet ${
+            currentSection === 1 ? "hide" : "show"
+          }`}
+          src={props.currentPlanet.images["planet"]}
+          alt={props.currentPlanet.name + " planet"}
+        />
+        <img
+          className={`planet-display__image image-internal ${
+            currentSection === 1 ? "show" : "hide"
+          }`}
+          src={props.currentPlanet.images["internal"]}
+          alt={props.currentPlanet.name + " interior"}
+        />
+        <img
+          className={`planet-display__image image-geology ${
+            currentSection === 2 ? "show" : "hide"
+          }`}
+          src={props.currentPlanet.images["geology"]}
+          alt={props.currentPlanet.name + " surface geology"}
+        />
+      </div>
+      <h2 className="planet-display__heading heading heading--planet-name">
         {props.currentPlanet.name}
       </h2>
-      <p>{props.currentPlanet[sections[currentSection]].content}</p>
+      <p className="planet-display__content">
+        {props.currentPlanet[sections[currentSection]].content}
+      </p>
       <a
         href={props.currentPlanet[sections[currentSection]].source}
         rel="noreferrer"
@@ -25,7 +50,10 @@ const PlanetDisplay = (props) => {
       >
         source : <span className="span-wikipedia">Wikipedia</span>
       </a>
-      <PlanetMenu changeSection={changeSection} />
+      <PlanetMenu
+        changeSection={changeSection}
+        currentSection={currentSection}
+      />
       <PlanetData currentPlanet={props.currentPlanet} />
     </main>
   );
