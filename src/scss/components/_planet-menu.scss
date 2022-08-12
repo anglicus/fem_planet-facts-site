@@ -47,6 +47,10 @@
       &:not(:last-child) {
         margin-bottom: 16px;
       }
+
+      &:hover {
+        background-color: $darkGrey;
+      }
     }
 
     @include breakpoint-up(large) {
@@ -61,6 +65,12 @@
       @include breakpoint-up(medium) {
         border: none;
         background-color: var(--hero-color);
+
+        animation: var(--coloring-animation) var(--animation-speed);
+
+        &:hover {
+          background-color: var(--hero-color);
+        }
       }
     }
   }

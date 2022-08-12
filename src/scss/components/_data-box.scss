@@ -47,7 +47,7 @@
 
   &__value {
     margin-bottom: 8px;
-    animation: var(--fading-in) 2s;
+    animation: var(--fading-animation) var(--animation-speed);
 
     @include breakpoint-up(medium) {
       margin-bottom: 0;

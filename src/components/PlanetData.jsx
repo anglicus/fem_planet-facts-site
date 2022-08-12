@@ -15,6 +15,8 @@ const PlanetData = (props) => {
         label={info.label}
         value={props.currentPlanet[info.index]}
         key={props.currentPlanet.name + info.index}
+        previousPlanetFadeOut={props.previousPlanetFadeOut}
+        newPlanetFadeIn={props.newPlanetFadeIn}
       />
     );
   });

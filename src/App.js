@@ -10,9 +10,10 @@ import "./css/App.css";
 function App() {
   const [currentPlanet, setCurrentPlanet] = useState(2); // start on Earth
   const [menuOpen, setMenuOpen] = useState(false); // hamburger menu on mobile
-  const [menuFade, setMenuFade] = useState(false);
-  const [animate, setAnimate] = useState(false);
-  const [previousPlanet, setPreviousPlanet] = useState(0);
+  const [menuFade, setMenuFade] = useState(false); // fading out for hamburger menu
+  const [previousPlanetFadeOut, setPreviousPlanetFadeOut] = useState(false); // animate planet going away
+  const [newPlanetFadeIn, setNewPlanetFadeIn] = useState(true); // animate planet coming in
+  const [previousPlanet, setPreviousPlanet] = useState(0); // only used when changing planets
 
   const toggleMenu = () => {
     if (menuOpen) {
@@ -29,17 +30,22 @@ function App() {
   };
 
   const changePlanet = (index) => {
-    if (index !== currentPlanet && !animate) {
+    if (index !== currentPlanet && !previousPlanetFadeOut) {
       setPreviousPlanet(currentPlanet);
       setCurrentPlanet(index);
-      setAnimate(true);
+      setPreviousPlanetFadeOut(true);
+      setNewPlanetFadeIn(false);
       setTimeout(() => {
-        setAnimate(false);
-      }, 2000);
+        setPreviousPlanetFadeOut(false);
+        setNewPlanetFadeIn(true);
+        setTimeout(() => {
+          setNewPlanetFadeIn(false);
+        }, 1300);
+      }, 1500);
       setMenuOpen(false);
-      // if someone rotates their phone with the mobile menu open it will disappear (but not trigger toggleMenu())
-      // leaving the scroll locked... this line ensures that if they change planets
-      // it will unlock again
+      // if someone rotates their phone with the mobile menu open it will disappear
+      // but toggleMenu will not trigger, leaving the scroll locked...
+      // this line ensures that if they change planets it will unlock again
       document.getElementsByTagName("html")[0].style.overflow = "scroll";
     }
   };
@@ -56,7 +62,8 @@ function App() {
       <PlanetDisplay
         currentPlanet={Planets[currentPlanet]}
         previousPlanet={Planets[previousPlanet]}
-        animate={animate}
+        previousPlanetFadeOut={previousPlanetFadeOut}
+        newPlanetFadeIn={newPlanetFadeIn}
       />
     </div>
   );

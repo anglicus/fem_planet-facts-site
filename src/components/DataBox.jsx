@@ -6,7 +6,15 @@ const DataBox = (props) => {
       <h4 className="data-box__label heading heading--data-label">
         {props.label}
       </h4>
-      <h5 className="data-box__value heading heading--data-value">
+      <h5
+        className={`data-box__value heading heading--data-value ${
+          props.previousPlanetFadeOut
+            ? "fading-out"
+            : props.newPlanetFadeIn
+            ? "fading-in"
+            : ""
+        }`}
+      >
         {props.value}
       </h5>
     </div>

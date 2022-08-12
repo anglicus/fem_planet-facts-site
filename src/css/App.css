@@ -101,6 +101,9 @@
   .planet-menu__button:not(:last-child) {
     margin-bottom: 16px;
   }
+  .planet-menu__button:hover {
+    background-color: #38384f;
+  }
 }
 @media (min-width: 1025px) {
   .planet-menu__button {
@@ -115,6 +118,11 @@
 @media (min-width: 641px) {
   .planet-menu__button.selected {
     border: none;
+    background-color: var(--hero-color);
+    -webkit-animation: var(--coloring-animation) var(--animation-speed);
+            animation: var(--coloring-animation) var(--animation-speed);
+  }
+  .planet-menu__button.selected:hover {
     background-color: var(--hero-color);
   }
 }
@@ -201,8 +209,8 @@
 }
 .data-box__value {
   margin-bottom: 8px;
-  -webkit-animation: var(--fading-in) 2s;
-          animation: var(--fading-in) 2s;
+  -webkit-animation: var(--fading-animation) var(--animation-speed);
+          animation: var(--fading-animation) var(--animation-speed);
 }
 @media (min-width: 641px) {
   .data-box__value {
@@ -485,12 +493,57 @@
     opacity: 0;
   }
 }
+@-webkit-keyframes grey-out {
+  from {
+    background-color: var(--hero-color);
+  }
+  to {
+    background-color: #38384f;
+  }
+}
+@keyframes grey-out {
+  from {
+    background-color: var(--hero-color);
+  }
+  to {
+    background-color: #38384f;
+  }
+}
+@-webkit-keyframes color-in {
+  from {
+    background-color: #38384f;
+  }
+  to {
+    background-color: var(--hero-color);
+  }
+}
+@keyframes color-in {
+  from {
+    background-color: #38384f;
+  }
+  to {
+    background-color: var(--hero-color);
+  }
+}
+:root {
+  --animation-speed: 1.5s;
+  --flyout-animation-speed: 1s;
+}
+
 .fading-in {
-  --fading-in: fade-in;
+  --fading-animation: fade-in forwards;
 }
 
 .fading-out {
-  --fading-out: fade-out;
+  --fading-animation: fade-out forwards;
+}
+
+.greying-out {
+  --coloring-animation: grey-out forwards;
+}
+
+.coloring-in {
+  --coloring-animation: color-in forwards;
 }
 
 .planet-display {
@@ -546,16 +599,16 @@
   }
 }
 .planet-display__image-div.flying-in {
-  -webkit-animation: fly-in 2s ease-out forwards;
-          animation: fly-in 2s ease-out forwards;
+  -webkit-animation: fly-in var(--animation-speed) ease-out forwards;
+          animation: fly-in var(--animation-speed) ease-out forwards;
 }
 .planet-display__image-div.previous-planet {
   display: none;
 }
 .planet-display__image-div.previous-planet.flying-out {
   display: block;
-  -webkit-animation: fly-out 1s ease-in forwards;
-          animation: fly-out 1s ease-in forwards;
+  -webkit-animation: fly-out var(--flyout-animation-speed) ease-in forwards;
+          animation: fly-out var(--flyout-animation-speed) ease-in forwards;
 }
 .planet-display__image {
   --image-scaling: 0.385;
@@ -613,8 +666,8 @@
   grid-area: text;
   justify-self: start;
   align-self: start;
-  -webkit-animation: var(--fading-in) 2s;
-          animation: var(--fading-in) 2s;
+  -webkit-animation: var(--fading-animation) var(--animation-speed);
+          animation: var(--fading-animation) var(--animation-speed);
 }
 @media (min-width: 641px) {
   .planet-display__text-div {
