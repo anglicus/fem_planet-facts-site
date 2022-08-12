@@ -17,8 +17,13 @@
   @include breakpoint-up(medium) {
     display: flex;
     flex-direction: column;
-    width: 281px;
+    max-width: 281px;
     height: auto;
+  }
+
+  @include breakpoint-up(large) {
+    max-width: none;
+    width: 350px;
   }
 
   &__button {

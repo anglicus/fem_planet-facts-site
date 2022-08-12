@@ -71,8 +71,14 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 281px;
+    max-width: 281px;
     height: auto;
+  }
+}
+@media (min-width: 1025px) {
+  .planet-menu {
+    max-width: none;
+    width: 350px;
   }
 }
 .planet-menu__button {
@@ -369,20 +375,26 @@
       -ms-flex-align: center;
           align-items: center;
   padding-bottom: 48px;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media (min-width: 641px) {
   .planet-display {
     display: grid;
     grid-template-areas: "image image" "text menu" "data data";
+    grid-template-columns: -webkit-min-content auto;
+    grid-template-columns: min-content auto;
     padding: 0 40px 40px;
     margin-top: 4px;
+    max-width: 800px;
   }
 }
-@media (min-width: 641px) and (min-width: 1025px) {
+@media (min-width: 1025px) {
   .planet-display {
     grid-template-areas: "image text" "image menu" "data data";
+    grid-template-columns: none;
     margin-top: 8px;
-    padding: 0 11.5% 56px;
+    padding: 0 clamp(40px, (100vw - 1110px) / 2, 165px) 56px;
     max-width: 1440px;
   }
 }
@@ -543,7 +555,6 @@
   .planet-display__planet-menu {
     margin-top: 0;
     margin-bottom: 76px;
-    width: 350px;
   }
 }
 .planet-display__planet-data {
