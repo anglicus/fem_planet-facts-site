@@ -44,31 +44,86 @@
   background: none;
   color: white;
 }
-.button--section-menu {
-  color: #838391;
-  width: 80px;
-}
-.button--section-menu.selected {
-  color: white;
-  border-top: 4px solid transparent;
-  border-bottom: 4px solid var(--hero-color);
-}
 
 .planet-menu {
   width: 100%;
   height: 50px;
   border-bottom: 1px solid #838391;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+@media (min-width: 641px) {
+  .planet-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 281px;
+    height: auto;
+  }
 }
 .planet-menu__button {
   position: relative;
   top: 1px;
   height: 100%;
+  color: #838391;
+  width: 80px;
+}
+@media (min-width: 641px) {
+  .planet-menu__button {
+    color: white;
+    border: 1px solid #838391;
+    width: 100%;
+    height: 40px;
+    text-align: left;
+  }
+  .planet-menu__button:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+.planet-menu__button.selected {
+  color: white;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid var(--hero-color);
+}
+@media (min-width: 641px) {
+  .planet-menu__button.selected {
+    border: none;
+    background-color: var(--hero-color);
+  }
 }
 .planet-menu__button-number {
   display: none;
+  color: #838391;
+}
+@media (min-width: 641px) {
+  .planet-menu__button-number {
+    display: inline;
+    margin-left: 20px;
+    margin-right: 12px;
+  }
 }
 .planet-menu__extra-text {
   display: none;
+  color: white;
+}
+@media (min-width: 641px) {
+  .planet-menu__extra-text {
+    display: inline;
+  }
 }
 
 .data-box {
@@ -93,11 +148,34 @@
 .data-box:not(:last-child) {
   margin-bottom: 8px;
 }
+@media (min-width: 641px) {
+  .data-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: 88px;
+    padding: 16px;
+  }
+  .data-box:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 11px;
+  }
+}
 .data-box__label {
   color: #838391;
 }
 .data-box__value {
   margin-bottom: 8px;
+}
+@media (min-width: 641px) {
+  .data-box__value {
+    margin-bottom: 0;
+    margin-top: 6px;
+  }
 }
 
 .header {
@@ -117,6 +195,20 @@
           justify-content: space-between;
   padding: 16px 24px;
   border-bottom: 1px solid #838391;
+}
+@media (min-width: 641px) {
+  .header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 32px 52px 32px;
+  }
+}
+@media (min-width: 641px) {
+  .header__menu-button {
+    display: none;
+  }
 }
 .header__hamburger-icon {
   width: 24px;
@@ -138,6 +230,32 @@
 .header__menu-section.open {
   display: block;
 }
+@media (min-width: 641px) {
+  .header__menu-section.open {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media (min-width: 641px) {
+  .header__menu-section {
+    position: relative;
+    top: 0;
+    height: auto;
+    padding: 0;
+    margin-top: 39px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
 .header__planet-button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -155,6 +273,19 @@
 .header__planet-button:not(:last-child) {
   border-bottom: 1px solid #838391;
 }
+@media (min-width: 641px) {
+  .header__planet-button {
+    height: auto;
+    width: auto;
+    color: #838391;
+  }
+  .header__planet-button:not(:last-child) {
+    border: none;
+  }
+  .header__planet-button:hover {
+    color: white;
+  }
+}
 .header__menu-circle {
   display: block;
   width: 20px;
@@ -162,14 +293,29 @@
   border-radius: 50%;
   background-color: var(--menu-color);
 }
+@media (min-width: 641px) {
+  .header__menu-circle {
+    display: none;
+  }
+}
 .header__button-label {
   margin-left: 25px;
+}
+@media (min-width: 641px) {
+  .header__button-label {
+    margin: 0;
+  }
 }
 .header__menu-icon {
   width: 4px;
   height: 8px;
   margin-left: auto;
   margin-right: 8px;
+}
+@media (min-width: 641px) {
+  .header__menu-icon {
+    display: none;
+  }
 }
 
 .planet-display {
@@ -185,10 +331,23 @@
           align-items: center;
   padding-bottom: 48px;
 }
+@media (min-width: 641px) {
+  .planet-display {
+    display: grid;
+    grid-template-areas: "image image" "text menu" "data data";
+    padding: 0 40px 40px;
+  }
+}
 .planet-display__image-div {
   position: relative;
   width: 100%;
   height: 304px;
+  grid-area: image;
+}
+@media (min-width: 641px) {
+  .planet-display__image-div {
+    height: 454px;
+  }
 }
 .planet-display__image {
   --image-scaling: 0.385;
@@ -198,24 +357,72 @@
   -webkit-transform: translateY(-50%) translateX(-50%) scale(var(--image-scaling));
           transform: translateY(-50%) translateX(-50%) scale(var(--image-scaling));
 }
+@media (min-width: 641px) {
+  .planet-display__image {
+    --image-scaling: 0.6325;
+  }
+}
 .planet-display__image.hide {
   display: none;
 }
 .planet-display__image.image-geology {
   --geology-image-scaling: 0.193;
+  --geology-image-translate-y: -32%;
   position: absolute;
-  -webkit-transform: translateY(-30%) translateX(-50%) scale(var(--geology-image-scaling));
-          transform: translateY(-30%) translateX(-50%) scale(var(--geology-image-scaling));
+  -webkit-transform: translateY(var(--geology-image-translate-y)) translateX(-50%) scale(var(--geology-image-scaling));
+          transform: translateY(var(--geology-image-translate-y)) translateX(-50%) scale(var(--geology-image-scaling));
+}
+@media (min-width: 641px) {
+  .planet-display__image.image-geology {
+    --geology-image-translate-y: -20.5%;
+    --geology-image-scaling: 0.31625;
+  }
+}
+.planet-display__text-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-area: text;
+  justify-self: start;
+  align-self: start;
+}
+@media (min-width: 641px) {
+  .planet-display__text-div {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 339px;
+    min-height: 253px;
+  }
 }
 .planet-display__content {
   text-align: center;
   margin-top: 16px;
   padding: 0 24px;
 }
+@media (min-width: 641px) {
+  .planet-display__content {
+    text-align: left;
+    margin-top: 24px;
+    padding: 0;
+  }
+}
 .planet-display__source-link {
   color: white;
   opacity: 0.5;
   margin-top: 32px;
+}
+@media (min-width: 641px) {
+  .planet-display__source-link {
+    margin-top: auto;
+  }
 }
 .planet-display__link-icon {
   position: relative;
@@ -226,23 +433,31 @@
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  grid-area: menu;
+  justify-self: end;
+}
+@media (min-width: 641px) {
+  .planet-display__planet-menu {
+    margin-top: 6px;
+  }
 }
 .planet-display__planet-data {
   margin-top: 28px;
   padding: 0 24px;
   width: 100%;
+  grid-area: data;
+}
+@media (min-width: 641px) {
+  .planet-display__planet-data {
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 body::before {
@@ -255,17 +470,18 @@ body::before {
   content: "";
   background-image: url("../design/Mobile - Mercury.png");
   background-size: 375px auto;
-  opacity: 0.4;
+  opacity: 0;
   pointer-events: none;
   /*
-      @include breakpoint-up(medium) {
-          background-image: url('/bgmatch/Desktop.jpg');
-          background-size: 768px auto;
-      }
-
       @include breakpoint-up(large) {
           background-image: url('/bgmatch/Desktop.jpg');
           background-size: 1440px auto;
       }
   */
+}
+@media (min-width: 641px) {
+  body::before {
+    background-image: url("../design/Tablet - Earth.png");
+    background-size: 768px auto;
+  }
 }/*# sourceMappingURL=App.css.map */

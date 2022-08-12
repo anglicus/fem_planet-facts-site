@@ -25,6 +25,7 @@ html {
 
     @include breakpoint-up(medium) {
       font-size: 3rem;
+      line-height: 3.875rem;
     }
 
     @include breakpoint-up(large) {
@@ -103,7 +104,7 @@ p {
   // planet menu items
   &--section-menu {
     font-size: 0.6875rem; // 0.5625rem; // design: 9px
-    letter-spacing: 2.3px;
+    letter-spacing: 2px;
 
     // same on medium
 

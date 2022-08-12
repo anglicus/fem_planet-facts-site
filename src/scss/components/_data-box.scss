@@ -1,6 +1,7 @@
 // _data-box.scss
 
 @use "../abstracts/colors" as *;
+@use "../abstracts/mixins" as *;
 
 .data-box {
   border: 1px solid $medGrey;
@@ -18,11 +19,28 @@
     margin-bottom: 8px;
   }
 
+  @include breakpoint-up(medium) {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 88px;
+    padding: 16px;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: 11px;
+    }
+  }
+
   &__label {
     color: $medGrey;
   }
 
   &__value {
     margin-bottom: 8px;
+
+    @include breakpoint-up(medium) {
+      margin-bottom: 0;
+      margin-top: 6px;
+    }
   }
 }

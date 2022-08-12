@@ -40,25 +40,27 @@ const PlanetDisplay = (props) => {
           alt={props.currentPlanet.name + " surface geology"}
         />
       </div>
-      <h2 className="planet-display__heading heading heading--planet-name">
-        {props.currentPlanet.name}
-      </h2>
-      <p className="planet-display__content">
-        {props.currentPlanet[sections[currentSection]].content}
-      </p>
-      <a
-        className="planet-display__source-link"
-        href={props.currentPlanet[sections[currentSection]].source}
-        rel="noreferrer"
-        target="_blank"
-      >
-        Source : <span className="span-wikipedia">Wikipedia</span>
-        <img
-          className="planet-display__link-icon"
-          src={iconSource}
-          alt="link icon"
-        />
-      </a>
+      <div className="planet-display__text-div">
+        <h2 className="planet-display__heading heading heading--planet-name">
+          {props.currentPlanet.name}
+        </h2>
+        <p className="planet-display__content">
+          {props.currentPlanet[sections[currentSection]].content}
+        </p>
+        <a
+          className="planet-display__source-link"
+          href={props.currentPlanet[sections[currentSection]].source}
+          rel="noreferrer"
+          target="_blank"
+        >
+          Source : <span className="span-wikipedia">Wikipedia</span>
+          <img
+            className="planet-display__link-icon"
+            src={iconSource}
+            alt="link icon"
+          />
+        </a>
+      </div>
       <PlanetMenu
         changeSection={changeSection}
         currentSection={currentSection}

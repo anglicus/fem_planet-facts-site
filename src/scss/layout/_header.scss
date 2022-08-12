@@ -1,6 +1,7 @@
 // _header.scss
 
 @use "../abstracts/colors" as *;
+@use "../abstracts/mixins" as *;
 
 .header {
   position: relative;
@@ -11,6 +12,17 @@
 
   padding: 16px 24px;
   border-bottom: 1px solid $medGrey;
+
+  @include breakpoint-up(medium) {
+    flex-direction: column;
+    padding: 32px 52px 32px;
+  }
+
+  &__menu-button {
+    @include breakpoint-up(medium) {
+      display: none;
+    }
+  }
 
   &__hamburger-icon {
     width: 24px;
@@ -33,6 +45,23 @@
 
     &.open {
       display: block;
+
+      @include breakpoint-up(medium) {
+        display: flex;
+      }
+    }
+
+    @include breakpoint-up(medium) {
+      position: relative;
+      top: 0;
+      height: auto;
+
+      padding: 0;
+      margin-top: 39px;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
     }
   }
 
@@ -46,6 +75,19 @@
     &:not(:last-child) {
       border-bottom: 1px solid $medGrey;
     }
+
+    @include breakpoint-up(medium) {
+      &:not(:last-child) {
+        border: none;
+      }
+      height: auto;
+      width: auto;
+      color: $medGrey;
+
+      &:hover {
+        color: white;
+      }
+    }
   }
 
   &__menu-circle {
@@ -54,10 +96,18 @@
     height: 20px;
     border-radius: 50%;
     background-color: var(--menu-color);
+
+    @include breakpoint-up(medium) {
+      display: none;
+    }
   }
 
   &__button-label {
     margin-left: 25px;
+
+    @include breakpoint-up(medium) {
+      margin: 0;
+    }
   }
 
   &__menu-icon {
@@ -65,5 +115,9 @@
     height: 8px;
     margin-left: auto;
     margin-right: 8px;
+
+    @include breakpoint-up(medium) {
+      display: none;
+    }
   }
 }
