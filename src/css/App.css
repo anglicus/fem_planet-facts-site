@@ -771,30 +771,4 @@
   .planet-display__planet-data {
     margin-top: -6px;
   }
-}
-
-body::before {
-  position: absolute;
-  z-index: 3;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  content: "";
-  background-image: url("../design/Mobile - Mercury.png");
-  background-size: 375px auto;
-  opacity: 0;
-  pointer-events: none;
-}
-@media (min-width: 641px) {
-  body::before {
-    background-image: url("../design/Tablet - Saturn.png");
-    background-size: 768px auto;
-  }
-}
-@media (min-width: 1025px) {
-  body::before {
-    background-image: url("../design/Desktop - Earth - 03.png");
-    background-size: 1440px auto;
-  }
 }/*# sourceMappingURL=App.css.map */
