@@ -28,7 +28,7 @@ Users should be able to:
 
 ![Mobile](./Screenshot-Mobile.png)
 ![Mobile Menu](./Screenshot-Mobile-Menu.png)
-![Tablet](./Screenshot-Tablet.png
+![Tablet](./Screenshot-Tablet.png)
 ![Desktop](./Screenshot-Desktop.png))
 
 ### Links
