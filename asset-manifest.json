@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/fem_planet-facts-site/static/css/main.8df3993f.css",
-    "main.js": "/fem_planet-facts-site/static/js/main.a10bcd8a.js",
+    "main.css": "/fem_planet-facts-site/static/css/main.13096682.css",
+    "main.js": "/fem_planet-facts-site/static/js/main.18b2fb75.js",
     "static/js/787.8c4755c7.chunk.js": "/fem_planet-facts-site/static/js/787.8c4755c7.chunk.js",
     "static/media/background-stars.svg": "/fem_planet-facts-site/static/media/background-stars.f6233a6a8d2351c57f2b.svg",
     "index.html": "/fem_planet-facts-site/index.html",
     "static/media/icon-source.svg": "/fem_planet-facts-site/static/media/icon-source.90231c6845b7449a736412f3da2e3aaa.svg",
     "static/media/icon-hamburger.svg": "/fem_planet-facts-site/static/media/icon-hamburger.05a40a49142005f6faf230286ab38214.svg",
     "static/media/icon-chevron.svg": "/fem_planet-facts-site/static/media/icon-chevron.8915cee97f993fb990aac66c578ad575.svg",
-    "main.8df3993f.css.map": "/fem_planet-facts-site/static/css/main.8df3993f.css.map",
-    "main.a10bcd8a.js.map": "/fem_planet-facts-site/static/js/main.a10bcd8a.js.map",
+    "main.13096682.css.map": "/fem_planet-facts-site/static/css/main.13096682.css.map",
+    "main.18b2fb75.js.map": "/fem_planet-facts-site/static/js/main.18b2fb75.js.map",
     "787.8c4755c7.chunk.js.map": "/fem_planet-facts-site/static/js/787.8c4755c7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8df3993f.css",
-    "static/js/main.a10bcd8a.js"
+    "static/css/main.13096682.css",
+    "static/js/main.18b2fb75.js"
   ]
 }
