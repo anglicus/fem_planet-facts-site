@@ -688,6 +688,10 @@
     margin-top: 138px;
   }
 }
+.planet-display__section-heading {
+  position: absolute;
+  opacity: 0;
+}
 .planet-display__content {
   text-align: center;
   margin-top: 16px;

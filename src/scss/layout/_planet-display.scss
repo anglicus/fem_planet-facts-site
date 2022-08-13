@@ -136,6 +136,12 @@
     }
   }
 
+  &__section-heading {
+    // this is permanently invisible and exists only to allow
+    // screen readers to interpret which section is being displayed
+    position: absolute;
+    opacity: 0;
+  }
   &__content {
     text-align: center;
     margin-top: 16px;

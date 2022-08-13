@@ -95,6 +95,9 @@ const PlanetDisplay = (props) => {
             ? props.previousPlanet.name
             : props.currentPlanet.name}
         </h2>
+        <h3 className="planet-display__section-heading">
+          {sections[currentSection]}
+        </h3>
         <p className="planet-display__content">
           {props.previousPlanetFadeOut
             ? props.previousPlanet[sections[currentSection]].content
